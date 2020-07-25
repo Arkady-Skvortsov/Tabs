@@ -11,17 +11,12 @@
 <body>
    <div class="page">
    	  <div class="tabs">
-   	  	 <div class="tab_menu">
-   	  	 	<div class="first_choise block">
-   	  	 	   <a href="#tab_1"><span>Элли</span></a>
-   	  	    </div>
-   	  	    <div class="second_choise block">
-   	  	 	   <a href="#tab_2"><span>Эбби</span></a>
-   	  	    </div>
-   	  	 </div>
-   	  	 <div class="tabs_content">
-   	  	 	<div id="tab_1" class="tab">
-   	  	 		<div class="hero_block" title="Ellie">
+   	  	<div class="tabs_content">
+   	  	 	<div id="tab_1" class="tab t_1">
+   	  	 		<div class="hero_block hr_1" title="Ellie">
+               <div class="arrow_block arr_1">
+                 <i class="fas fa-arrow-down arrow arrow_first"></i>
+               </div>
    	  	 		</div>
    	  	 		<div class="text_content">
    	  	 			<span class="txt">
@@ -29,8 +24,11 @@
    	  	 			</span>
    	  	 		</div> 
    	  	 	</div>
-   	  	 	<div id="tab_2" class="tab">
+   	  	 	<div id="tab_2" class="tab t_2">
    	  	 		<div class="hero_block hr_2" title="Abby">
+               <div class="arrow_block arr_2">
+                 <i class="fas fa-arrow-up arrow arrow_second"></i>
+               </div>
    	  	 		</div>
                 <div class="text_content">
                 	<span class="txt">
@@ -38,8 +36,17 @@
                 	</span>
                 </div>
    	  	 	</div>  
-   	  	 </div> 
-   	  </div>
+          <div class="tab_menu">
+            <div class="first_choise block">
+             <a href="#tab_1"><span>Элли</span></a>
+            </div>
+            <div class="second_choise block">
+             <a href="#tab_2"><span>Эбби</span></a>
+            </div>
+          </div>
+   	  	</div> 
+   	    </div>
    </div>
+   <script src="./Tabs.js"></script>
 </body>
 </html>

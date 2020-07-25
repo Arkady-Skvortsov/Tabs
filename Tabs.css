@@ -28,7 +28,7 @@
 	height: 75px;
 	width: 550px;
 	position: absolute;
-	top: 0;
+	top: -75px;
 	background: black;
 }
 
@@ -36,6 +36,10 @@
 	display: inline-block;
 	height: 75px;
 	width: 273px;
+	transition: .8s;
+	-o-transition: .8s;
+	-mozila-transition: .8s;
+	-webkit-transition: .8s;
 }
 
 .page .tabs .tab_menu .block a {
@@ -50,8 +54,28 @@
 }
 
 .page .tabs .tab_menu .block a span {
-	z-index: 2;
+	transition: .8s;
+    -o-transition: .8s;
+    -webkit-transition: .8s;
+    -mozila-transition: .8s;
 }
+
+.page .tabs .tab_menu .first_choise:hover {
+	background: white;
+}
+
+.page .tabs .tab_menu .first_choise a span:hover {
+    color: black;
+}
+
+.page .tabs .tab_menu .second_choise a span:hover {
+	color: black;
+}
+
+.page .tabs .tab_menu .second_choise:hover {
+	background: red;
+}
+
 
 .page .tabs .tabs_content {
     height: 640px;
@@ -72,6 +96,26 @@
 	display: block;
 }
 
+/* .page .tabs .tabs_content .tab:target ~ .first_choice {
+	background: white;
+} */
+
+.t_1:target ~ .tab_menu .first_choise {
+	background: white;
+}
+
+.t_1:target ~ .tab_menu .first_choise a span {
+	color: black;
+}
+
+.t_2:target ~ .tab_menu .second_choise {
+	background: red;
+}
+
+.t_2:target ~ .tab_menu .second_choise a span {
+	color: black;
+}
+
 .page .tabs .tabs_content .tab .hero_block {
     height: 300px;
     width: 350px;
@@ -81,9 +125,13 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    transition: .9s;
+    -o-transition: .9s;
+    -webkit-transition: .9s;
+    -mozila-transition: .9s;
 }
 
-.page .tabs .tabs_content .tab .hero_block {
+.page .tabs .tabs_content .tab .hr_1 {
 	border: 4px solid white;
 }
 
@@ -95,6 +143,57 @@
 	background: url('./img/Abby.jpg');
 	background-size: cover;
 	background-position: center;
+}
+
+.page .tabs .tabs_content .tab .hero_block .arrow_block {
+	background: rgba(0, 0, 0, .8);
+	height: 300px;
+	width: 350px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	display: none;
+}
+
+.page .tabs .tabs_content .tab .hero_block .arrow_block.show {
+	display: block;
+}
+
+.page .tabs .tabs_content .tab .hero_block .arrow_block .arrow {
+	font-size: 100px;
+	cursor: pointer;
+	color: white;
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	transition: .8s;
+    -o-transition: .8s;
+    -webkit-transition: .8s;
+    -mozila-transition: .8s;
+}
+
+.page .tabs .tabs_content .tab .hero_block .arrow_block .arrow_first:hover {
+	transform: translateY(20px);
+	color: red;
+	text-shadow: 0 0 15px red;
+}
+
+.page .tabs .tabs_content .tab .hero_block .arrow_block .arrow_second {
+	color: red;
+}
+
+.page .tabs .tabs_content .tab .hero_block .arrow_block .arrow_second:hover {
+	transform: translateY(-20px);
+	color: white;
+	text-shadow: 0 0 15px white;
+}
+
+.page .tabs .tabs_content .tab .hr_1:hover {
+    border: 4px solid red;
+} 
+
+.page .tabs .tabs_content .tab .hr_2:hover {
+	border: 4px solid white;
 }
 
 .page .tabs .tabs_content .tab .text_content {
